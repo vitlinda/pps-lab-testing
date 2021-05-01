@@ -28,4 +28,8 @@ class SetSpec extends PropSpec with PropertyChecks with Checkers with Matchers {
       Prop.throws(classOf[NoSuchElementException])(set.head) }
     }
   }
+
+  property("A set must have size >= 0") {
+    check { Prop.forAll { (l: Set[Int]) => l.size >= 0 } }
+  }
 }
