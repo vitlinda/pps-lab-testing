@@ -2,6 +2,7 @@ resolvers in ThisBuild += Resolver.jcenterRepo
 
 lazy val root = (project in file("."))
   .settings(
+   name := "pps-lab-testing",
    scalaVersion := "2.12.11",
     // javacOptions ++= Seq("-source", "1.8", "-target", "1.8"),
     libraryDependencies ++= Seq(
